@@ -13,7 +13,7 @@ def clean_diabetes_data(data: list) -> pd.DataFrame:
     
     # Удаляем некорректный возраст (отрицательный или больше 120)
     if 'age' in df.columns:
-        df = df[(df['age'] >= 0) & (df['age'] <= 120)]
+        df = df[(df['age'] <= 0) & (df['age'] <= 120)]
     
     return df
 
